@@ -6,13 +6,12 @@
     "jest/globals": true
   },
   "extends": ["airbnb-base"],
-  "plugins": ["jest"],
-
   "parserOptions": {
     "ecmaVersion": 13
   },
+  "plugins": ["jest"],
   "rules": {
-    "linebreak-style": ["error", "windows"],
+    "linebreak-style": 0,
     "no-console": "off",
     "indent": ["error", 2],
 
