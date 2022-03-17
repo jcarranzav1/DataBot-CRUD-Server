@@ -1,8 +1,17 @@
 const express = require('express');
+const cors = require('cors');
 const { logger, requestId, requestLog } = require('./config/logger');
 const api = require('./api/api');
 
 const app = express();
+
+app.use(
+  cors({
+    origin: '*',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Accept', 'Content-Type', 'Authorization'],
+  }),
+);
 
 app.use(requestId);
 app.use(requestLog);

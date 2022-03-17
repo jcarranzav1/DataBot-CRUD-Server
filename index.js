@@ -6,6 +6,7 @@ const app = require('./server');
 const { mongodb_uri: uri, port } = config;
 
 connect(uri);
+
 const server = http.createServer(app);
 
 server.listen(port, () => {
